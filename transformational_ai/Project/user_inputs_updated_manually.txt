@@ -1,0 +1,77 @@
+Transformational AI: Analyzing Ecommerce Large Datasets for Machine Learning
+Completed by: Prashant Kumar
+—————————————-
+
+Question 1: 
+
+* Columns:- 
+	- review_id(a unique review id for each review), 
+	- product_id(the ID of the reviewed product), 
+	- review_text(review text written by the user), 
+	- rating(rating given by the user on the scale of 1 to 5), 
+	- reviewer_id(unique id for the reviewer), 
+	- review_date(date on which review was given), 
+	- summary(a short summary of the review), 
+	- verified_purchase(was the purchase verified), 
+	- helpful_votes(number of helpful votes), 
+	- total_votes(total number of votes)
+
+* Datatypes:-
+	- rating(float), title(Strings), text(Strings), images(list), asin(Strings), parent_asin(Strings),  user_id(Strings), timestamp(Integers), helpful_vote(Integers), verified_purchase(Boolean)
+
+* Structure of Reviews:- 
+	- Each row in the record shows an individual review. The record includes reviews, product data and the reviewers data. 
+	- A sample review looks something like:- 
+		{
+		"rating": 3.0, 
+		"title": "Smells like gasoline! Going back!", 
+		"text":  "First & most offensive: they reek of gasoline", 
+		"images": [{'small_image_url': 'https://m.media-amazon.c,
+		"asin": B083NRGZMM, 
+		"parent_asin": B083NRGZMM, 
+		"user_id": AFKZENTNBQ7A7V7UXW5JJI6UGRYQ, 
+		"timestamp": 1658185117948, 
+		"helpful_vote": 0, 
+		"verified_purchase": True
+		}
+
+============================================================================================================================================================
+Question 2: 
+
+The output I expected is somewhat matching. Additionally, there are extra information available. The excepted columns are rating, text, title, asin, user_id and timestamp. These coulumn were needed to perform basic analysis. There are some high level information available such as images, helpful_vote and verified_purchase which I did not expect.
+
+============================================================================================================================================================
+
+Question 3: 
+
+* Defined Items_To_Print = 10 to define how many rows we want to see. 
+* pd.set_option('display.max_columns', None) - display set to max_columns in order to display all the columns in the DataFrame.
+* pd.set_option('display.width', 1000) - Increased the display width to 1000 characters to improve readability. This will prevent wrapping or truncation.
+* pd.set_option('display.max_colwidth', 50) - Set column width for individual columns to 50 so that the lengthy texts are displayed properly.  
+
+Overall, we have tried to improve readability, made all columns and their texts visible properly.
+
+============================================================================================================================================================
+
+Question 4: 
+
+The reviews dataset focusses on the reviews given by the user whereas the reviews meta data set fouses on the products being reviewed. 
+The key difference between the 2 datasets are- The reviews dataset is meant for sentiment analysis whereas the reviews meta dataset is meant for product categorization.
+
+============================================================================================================================================================
+
+Question 5: 
+
+Using EDA(exploratory data analysis) would be the best for this dataset. We will dive into both the datasets to analyze the reviews and the associated product.
+
+============================================================================================================================================================
+
+Question 6: 
+
+From the graph I can see that lower price products are more popular among the people.
+
+============================================================================================================================================================
+
+Question 7: 
+
+Lower price products have better rating. This shows people look for "Value for Money" products.
